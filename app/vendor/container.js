@@ -1,8 +1,10 @@
-import env from '../config';
+import { Config as env } from '../../config';
 
 export default class Container {
-    runServer(App) {
-        App.listen(env.PORT, () => console.log(`App running at port : ${env.PORT}`));
+	constructor(App) {
+		this.app = App;
+	}
+    runServer() {
+        this.app.listen(env.PORT, () => console.log(`App running at port : ${env.PORT}`));
     }
 }
-

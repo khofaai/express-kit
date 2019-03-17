@@ -1,0 +1,12 @@
+
+{
+	"defaultEnv": "local",
+	"local": {
+		"driver": "mysql",
+		"multipleStatements": true,
+		"database": "database-name",
+		"host": "localhost",
+		"user": "root",
+		"password": "root"
+	}
+}

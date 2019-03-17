@@ -1,6 +1,12 @@
+import Database from './database';
 import dotenv from 'dotenv';
 dotenv.config();
 
-export default {
+const Config = {
     PORT: process.env.PORT
+}
+
+export {
+	Config,
+	Database
 }
