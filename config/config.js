@@ -1,12 +1,9 @@
-import Database from './database';
-import dotenv from 'dotenv';
-dotenv.config();
-
-const Config = {
-    PORT: process.env.PORT
-}
+import database from './db/database';
+import path from './util/Path';
+import env from './util/Env';
 
 export {
-	Config,
-	Database
+	env,
+	database,
+	path,
 }

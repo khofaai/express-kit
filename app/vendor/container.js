@@ -1,4 +1,4 @@
-import { Config as env } from '../../config';
+import { env, path } from '@/config';
 
 export default class Container {
 	constructor(App) {
