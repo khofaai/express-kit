@@ -1,10 +1,21 @@
-import { env, path } from '@/config';
+import { env } from '@/config';
+import Routes from '@/app/routes';
 
 export default class Container {
-	constructor(App) {
-		this.app = App;
+	
+	constructor(App, httpServer) {
+		this.App = App;
+		this.httpServer = httpServer;
 	}
-    runServer() {
-        this.app.listen(env.PORT, () => console.log(`App running at port : ${env.PORT}`));
-    }
+
+	mapRoutes() {
+		Routes.map( ({path: _path, method, service}) => {
+			this.App[method.toLowerCase()]( _path, (req, res) => new service({req, res}) );
+		});
+	}
+
+	runServer() {
+		this.mapRoutes();
+		this.httpServer.listen(env.PORT, () => console.log(`App running at port : ${env.PORT}`));
+	}
 }

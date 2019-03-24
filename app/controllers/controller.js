@@ -1,5 +1,1 @@
-export default class controller {
-	constructor() {
-		
-	}
-}
+export default class controller { };
