@@ -16,7 +16,3 @@ export default class welcomeService extends Service {
 
 
 }
-
-
-// {domain}/api/welcome-service/$
-// {domain}/api/welcome-service | {data}
