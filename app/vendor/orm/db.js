@@ -32,9 +32,9 @@ class DB {
     }
 
     async connect() {
-        let cnf = this.dbConfig;
+        let { host, port, database, options } = this.dbConfig;
         //${cnf.user}:${cnf.password}@
-        this.db = Mongoose.connect(`mongodb://${cnf.host}:${cnf.port}/${cnf.database}`,cnf.options)
+        this.db = Mongoose.connect(`mongodb://${host}:${port}/${database}`,options)
     }
 }
 

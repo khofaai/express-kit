@@ -1,6 +1,6 @@
 import Service from '../Service';
 
-export default class welcomeService extends Service {
+export default class ProjectService extends Service {
 
 	constructor({req, res}) {
 		super({req, res});

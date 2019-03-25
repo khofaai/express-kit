@@ -5,5 +5,9 @@ export default [
 	route({
 		path: 'welcome-service',
 		service: welcomeService
+	}),
+	route({
+		path: 'welcome',
+		service: welcomeService
 	})
 ]
