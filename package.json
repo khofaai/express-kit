@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/babel-node index.js",
+    "start": "nodemon index.js --exec babel-node --presets babel-preset-env",
     "migrate": "node node_modules/db-migrate/bin/db-migrate --config config/database.json --migrations-dir=app/databases/migrations"
   },
   "author": "",
@@ -16,9 +16,11 @@
     "db-migrate": "^0.11.5",
     "dotenv": "^7.0.0",
     "esm": "^3.2.17",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
   },
   "devDependencies": {
-    "babel-plugin-root-import": "^6.1.0"
+    "babel-plugin-root-import": "^6.1.0",
+    "nodemon": "^1.18.10"
   }
 }

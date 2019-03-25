@@ -2,8 +2,16 @@
     "presets": ["env"],
     "plugins": [
 	    ["babel-plugin-root-import", {
-	      	"rootPathPrefix": "@",
-	        "rootPathSuffix": "./"
+					"paths" :[
+						{
+							"rootPathPrefix": "@",
+							"rootPathSuffix": "./"
+						},
+						{
+							"rootPathPrefix": "~",
+							"rootPathSuffix": "./app"
+						}
+					]
 	    }]
 	 ],
 }
