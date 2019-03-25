@@ -9,5 +9,8 @@ export default class welcomeService extends Service {
 
 	async handle() {
 		// instruction
+		return this.toJson({
+			name:this.constructor.name
+		})
 	}
 }

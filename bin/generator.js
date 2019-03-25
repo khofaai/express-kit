@@ -70,7 +70,7 @@ Generator.exec([
                     {
                         type: "file",
                         name: "[name].js",
-                        content: `import Model from '../Model';\nimport Schema from './schema';\n\nclass User extends Model {\n\tconstructor() {\n\t\tsuper(Schema);\n\t}\n}\n\nexport default User;\n`
+                        content: `import Model from '../Model';\nimport Schema from './schema';\n\nclass [name] extends Model {\n\tconstructor() {\n\t\tsuper(Schema);\n\t}\n}\n\nexport default [name];\n`
                     },
                     {
                         type: "file",
