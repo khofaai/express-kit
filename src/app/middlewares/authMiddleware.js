@@ -1,5 +1,5 @@
 export default (req, res, next) => {
-	console.log('authMiddleware');
-	// res.send(404, 'ERROR');
+	res.status(404).send('[authMiddleware] ERROR NO POST').end();
+	return;
 	next();
 }

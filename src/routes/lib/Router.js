@@ -31,7 +31,12 @@ class Router extends routerUtil {
 		this.middlewares = middlewares;
 		return this;
 	}
-
 }
 
-export default new Router();
+export default (routes) => {
+	return routes.map(route => {
+		return (new Router)
+			.middleware(typeof route.middleware !== 'undefined' ? route.middleware : [])
+			.registerRoute({ [route.path]: route.service }, typeof route.method !== 'undefined' ? route.method : 'GET' );
+	});
+}

@@ -3,8 +3,8 @@ import Service from '~/app/services/Service';
 
 class routerUtil {
 
-	constructor() {
-		this._methods = ['OPTIONS', 'POST', 'GET', 'PUT', 'DELETE']; // the first one is the default one
+	getMethods() {
+		return ['OPTIONS', 'POST', 'GET', 'PUT', 'DELETE'];
 	}
 
 	getPrefix() {
@@ -18,7 +18,7 @@ class routerUtil {
 	};
 
 	checkMethod(method) {
-		return this._methods.includes(method) ? method : this._methods[0];
+		return this.getMethods().includes(method) ? method : this.getMethods()[0];
 	}
 
 	getServiceRoute(service) {

@@ -53,9 +53,14 @@ _A CLI to Generate MicroServices with the following architecture :_
 	    │       └── package.json
 ```
 
-### Controllers
+### Middleware
 
-_NOT YET_
+```javascript
+export default (req, res, next) => {
+	// logic
+	next();
+}
+```
 
 ### Database/Migration/Seeds
 
