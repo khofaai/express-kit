@@ -5,6 +5,7 @@ class Router extends routerUtil {
 	constructor() {
 		super();
 		this.route = null;
+		this.middlewares = [];
 	}
 
 	registerRoute(route, method = 'GET') {
@@ -18,12 +19,17 @@ class Router extends routerUtil {
 		else if (this.hasDetailParams(route)) {
 			this.route = this.buildRoute(route.path, method, route.service);
 		}
-		
+
 		if (typeof this.route !== null) {
-			return this.route;
+			return this;
 		}
 
 		console.error(`${route} has errors`);
+	}
+
+	middleware(middlewares) {
+		this.middlewares = middlewares;
+		return this;
 	}
 
 }

@@ -9,8 +9,9 @@ export default class Container {
 	}
 
 	mapRoutes() {
-		Routes.map( ({path: _path, method, service}) => {
-			this.App[method.toLowerCase()]( _path, (req, res) => (new service({req, res})).handle() );
+		Routes.map( _router => {
+			let {path: _path, method, service} = _router.route;
+			this.App[method.toLowerCase()]( _path, _router.middlewares, (req, res) => (new service({req, res})).handle() );
 		});
 	}
 
