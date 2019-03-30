@@ -4,12 +4,12 @@ export default class welcomeService extends Service {
 
 	constructor({req, res}) {
 		super({req, res});
-		this.handle({req, res});
+		this.route = 'welcome'; //optional
 	}
 
 	async handle() {
 		// instruction
-		return this.toJson({
+		this.toJson({
 			name:this.constructor.name
 		})
 	}

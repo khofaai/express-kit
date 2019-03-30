@@ -1,3 +1,3 @@
-import Container from './app';
+import App from './src';
 
-Container.runServer();
+App.runServer();
