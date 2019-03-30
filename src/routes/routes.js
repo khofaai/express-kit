@@ -1,16 +1,8 @@
-import { registerRoute } from './lib/Router';
+import Router from './lib/Router';
 import { welcomeService } from '~/app/services';
 
 export default [
-	registerRoute({
-		path: 'welcome-service',
-		service: welcomeService
-	}),
-	registerRoute({
-		path: 'welcome',
-		service: welcomeService
-	}),
-	registerRoute({
-		'welcome': welcomeService
+	Router.registerRoute({
+		'welcome-service': welcomeService
 	})
 ]
