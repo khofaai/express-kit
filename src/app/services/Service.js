@@ -1,5 +1,5 @@
 export default class Service {
-
+	
 	constructor({req, res}) {
 		this.req = req;
 		this.res = res;
@@ -19,5 +19,13 @@ export default class Service {
 
 	getRequest() {
 		return this.req;
+	}
+
+	setResponse(res) {
+		this.res = res;
+	}
+
+	setRequest(req) {
+		this.req = req;
 	}
 }

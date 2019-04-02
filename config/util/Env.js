@@ -1,5 +1,4 @@
 import dotenvLib from 'dotenv';
-
 // to bind .env file configuration to `process.env` global values
 dotenvLib.config();
 let optional = (arg, _def) => {
@@ -7,6 +6,7 @@ let optional = (arg, _def) => {
 }
 
 export default {
+	KEY: optional(process.env.KEY, null),
 	PORT: optional(process.env.PORT, 3000),
 	DB_PORT: optional(process.env.DB_PORT, 27017),
 	DB_USERNAME: optional(process.env.DB_USERNAME, 'root'),

@@ -1,5 +1,5 @@
 import { env } from '@/config';
-import Routes from '@/app/routes';
+import Routes from '~/routes';
 
 export default class Container {
 	

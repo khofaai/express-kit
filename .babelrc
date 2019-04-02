@@ -9,7 +9,7 @@
 				},
 				{
 					"rootPathPrefix": "~",
-					"rootPathSuffix": "./app"
+					"rootPathSuffix": "./src"
 				}
 			]
 		}]
