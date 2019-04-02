@@ -1,4 +1,4 @@
-import DB from '@/app/vendor/orm/db';
+import DB from '~/vendor/orm/db';
 import { Schema, model } from 'mongoose';
 class Model {
     constructor(modelSchema) {

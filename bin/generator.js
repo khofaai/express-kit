@@ -5,7 +5,7 @@ Generator.exec([
         'service': {
             root:'./app/services',
             structure: {
-                name: "[name]",
+                name: "[name]Service",
                 children:[
                     {
                         type: "file",
@@ -15,7 +15,7 @@ Generator.exec([
                     {
                         type: "file",
                         name: "[name]Service.js",
-                        content: `import Service from '../Service';\n\nexport default class [name]Service extends Service {\n\n\tconstructor({req, res}) {\n\t\tsuper({req, res});\n\t\tthis.handle({req, res});\n\t}\n\n\tasync handle() {\n\t\t// instruction\n\t}\n}\n`
+                        content: `import Service from '../Service';\n\nexport default class [name]Service extends Service {\n\n\tconstructor({req, res}) {\n\t\tsuper({req, res});\n\t}\n\n\tasync handle() {\n\t\t// instruction\n\t\treturn this.toJson({name: this.constructor.name})\n\t}\n}\n`
                     },
                     {
                         type: "file",
