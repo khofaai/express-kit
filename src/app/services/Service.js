@@ -5,12 +5,12 @@ export default class Service {
 		this.res = res;
 	};
 
-	toJson(data) {
-		return this.getResponse().json(data);
+	toJson(data, status = 200) {
+		return this.getResponse().status(status).json(data);
 	}
 
-	end(data) {
-		return this.getResponse().end(data);
+	end(data, status = 200) {
+		return this.getResponse().status(status).end(data);
 	}
 
 	getResponse() {
