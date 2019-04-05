@@ -16,9 +16,8 @@ export default class Container {
 			if(trustedHosts.includes(req.headers.origin)) {
 				return next();
 			}
-			else {
-				return res.status(500).send('PAGE NOT FOUND').end();
-			}
+
+			return res.status(500).send('PAGE NOT FOUND').end();
 		});
 		Routes.map( _router => {
 			let {path: _path, method, service} = _router.route;
