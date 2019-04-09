@@ -1,6 +1,26 @@
 # Express JS - starter KIT - Innoveos
 
 MicroService Starter KIT built with Express JS for [@innoveos](https://github.com/innoveos)
+## Installation
+
+You can simply  :
+```bash
+git clone https://github.com/khofaai/express-kit
+```
+Then go to project folder : 
+```bash
+cd express-kit
+``` 
+Then run 
+```bash
+npm install
+```
+
+After the installation finished, you can start `express js` server by running :
+```bash
+npm start
+```
+hope you'll build awesome things :D
 
 ## Features
 
