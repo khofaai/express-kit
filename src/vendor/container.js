@@ -16,9 +16,8 @@ export default class Container {
 			if(trustedHosts.includes(req.headers.origin)) {
 				return next();
 			}
-			else {
-				return res.status(500).send('PAGE NOT FOUND').end();
-			}
+
+			return res.status(500).send('PAGE NOT FOUND').end();
 		});
 		Routes.map( _router => {
 			let {path: _path, method, service} = _router.route;
@@ -29,9 +28,10 @@ export default class Container {
 	runServer() {
 		this.mapRoutes();
 		this.httpServer.listen(env.PORT, () => {
-			console.log("####################################")
-			console.log(`#### App running at port : ${env.PORT} ####`)
-			console.log("####################################")
+			console.log("####################################");
+			console.log(`#### App running at port : ${env.PORT} ####`);
+			console.log("####################################");
+			console.log("\x1b[32m", `http://${env.DB_HOSTNAME}:${env.PORT}`);
 		});
 	}
 }

@@ -1,13 +1,33 @@
 # Express JS - starter KIT - Innoveos
 
-MicroService Started KIT builded with Express JS for [@innoveos](https://github.com/innoveos)
+MicroService Starter KIT built with Express JS for [@innoveos](https://github.com/innoveos)
+## Installation
+
+You can simply  :
+```bash
+git clone https://github.com/khofaai/express-kit
+```
+Then go to project folder : 
+```bash
+cd express-kit
+``` 
+Then run 
+```bash
+npm install
+```
+
+After the installation finished, you can start `express js` server by running :
+```bash
+npm start
+```
+hope you'll build awesome things :D
 
 ## Features
 
 ### Fast Import Path
 
-- **`@`** refer to `ROOT_FOLDER/`
-- **`~`** refer to `ROOT_FOLDER/src/`
+- **`@`** refers to `ROOT_FOLDER/`
+- **`~`** refers to `ROOT_FOLDER/src/`
 
 You can import from `./src/app/models/User` like : 
 ```javascript
@@ -20,7 +40,7 @@ import * as Config from '@/config';
 
 ### ES6 impot / export
 
-It has `import` and `export` synthax out-of-box by the help of [`esm`](https://www.npmjs.com/package/esm)
+It has `import` and `export` syntax out-of-box with the help of [`esm`](https://www.npmjs.com/package/esm)
 
 ## CLI Builder
 
@@ -31,14 +51,14 @@ npm run generate
 Generate : , service, controller, model ?
 _
 ```
-you can write which one you want to generate if in you case is `model`
+You can write which one you want to generate if in you case is `model`
 ```bash
 Generate : , service, controller, model ?
 model
 model name ?
 _
 ```
-then you can name your `model`, unlike `service` and `controller` the package add to choosen name `Service` or `Controller`
+Then you can name your `model`, unlike `service` and `controller` the package add to chosen name `Service` or `Controller`
 
 ### MicroServices
 _NOT YET_ <br/>
