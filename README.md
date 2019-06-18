@@ -9,9 +9,9 @@ MicroService Started KIT builded with Express JS for [@innoveos](https://github.
 - **`@`** refer to `ROOT_FOLDER/`
 - **`~`** refer to `ROOT_FOLDER/src/`
 
-You can import from `./src/app/models/User` like : 
+You can import from `./src/app/models/Exemple` like : 
 ```javascript
-import User from '~/app/models/User';
+import Exemple from '~/app/models/Exemple';
 ```
 The same if you need to import from root folder :
 ```javascript
@@ -53,6 +53,18 @@ _A CLI to Generate MicroServices with the following architecture :_
 	    │       └── package.json
 ```
 
+### Database
+
+You can config your database settings in ~/config/util/Env
+
+### CRUD Exemple
+
+You can find an already existing CRUD MicroServices setup for the 'Exemple' Model in ~/src/app/services/Exemple
+
+### Routing
+
+You can find a base CRUD routing for the 'Exemple' MicroServices in ~/src/routes/exemple-routes
+
 ### Middleware
 
 ```javascript
@@ -65,4 +77,5 @@ export default (req, res, next) => {
 ### Database/Migration/Seeds
 
 _NOT YET_
+
 
