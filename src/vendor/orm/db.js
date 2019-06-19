@@ -18,7 +18,7 @@ class DB {
             port: 27017,
             user: 'root',
             password: '',
-            database: 'test',
+            database: 'exemple-express-kit',
             host: 'localhost',
             options:  { useNewUrlParser: true }
         },{
@@ -38,4 +38,4 @@ class DB {
     }
 }
 
-export default DB;
+export default new DB;
