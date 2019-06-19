@@ -17,7 +17,7 @@ export default class Container {
 		this.App.use(bodyParser.urlencoded({ extended: false }));
 		this.App.use(bodyParser.json());
 		this.App.use((req, res, next) => {
-			if (trustedHosts.includes(req.headers.origin)) {
+			if (trustedHosts.includes(req.headers.origin) || trustedHosts.includes('*')) {
 				return next();
 			}
 
