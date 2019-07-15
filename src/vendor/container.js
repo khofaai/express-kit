@@ -2,6 +2,7 @@ import { env, trustedHosts } from '@/config';
 import Routes from '~/routes';
 import bodyParser from 'body-parser';
 import cors from 'cors'
+import DB from './orm/db';
 
 export default class Container {
 
@@ -15,7 +16,8 @@ export default class Container {
 		this.App.use(bodyParser.urlencoded({ extended: false }));
 		this.App.use(bodyParser.json());
 		this.App.use((req, res, next) => {
-			if (trustedHosts.includes(req.headers.origin)) {
+      
+			if (trustedHosts.includes(req.headers.origin) || trustedHosts.includes('*')) {
 				return next();
 			}
 
