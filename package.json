@@ -29,7 +29,7 @@
     "express-rate-limit": "^3.4.0",
     "express-validator": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.4.19"
+    "mongoose": ">=5.7.5"
   },
   "devDependencies": {
     "babel-plugin-root-import": "^6.1.0",
