@@ -1,13 +1,13 @@
-import createExempleService from './Exemple/createService';
-import deleteExempleService from './Exemple/deleteService';
-import readAllExempleService from './Exemple/readAllService';
-import readOneExempleService from './Exemple/readOneService';
-import updateExempleService from './Exemple/updateService';
+import createExampleService from './Example/createService';
+import deleteExampleService from './Example/deleteService';
+import readAllExampleService from './Example/readAllService';
+import readOneExampleService from './Example/readOneService';
+import updateExampleService from './Example/updateService';
 
 export {
-	createExempleService,
-	deleteExempleService,
-	readAllExempleService,
-	readOneExempleService,
-	updateExempleService
+	createExampleService,
+	deleteExampleService,
+	readAllExampleService,
+	readOneExampleService,
+	updateExampleService
 };

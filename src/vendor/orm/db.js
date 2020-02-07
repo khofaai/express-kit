@@ -18,7 +18,7 @@ class DB {
             port: 27017,
             user: 'root',
             password: '',
-            database: 'exemple-express-kit',
+            database: 'Example-express-kit',
             host: 'localhost',
             options:  { useNewUrlParser: true }
         },{

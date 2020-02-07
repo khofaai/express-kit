@@ -1,7 +1,6 @@
 import Router from './lib/Router';
-import { authMiddleware } from '~/app/middlewares';
-import exempleRoutes from './exemple-routes';
+import ExampleRoutes from './example-routes';
 
 export default Router(
-	exempleRoutes
+	ExampleRoutes
 )

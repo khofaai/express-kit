@@ -1,8 +1,7 @@
 import { env, trustedHosts } from '@/config';
 import Routes from '~/routes';
 import bodyParser from 'body-parser';
-import cors from 'cors'
-import DB from './orm/db';
+import cors from 'cors';
 
 export default class Container {
 

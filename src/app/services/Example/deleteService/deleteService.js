@@ -1,23 +1,25 @@
+
 import Service from '../../Service';
-import Exemple from '~/app/models/Exemple';
+import Example from '~/app/models/Example';
 
 // let axios = require('axios')
 
-export default class readOneService extends Service {
+export default class deleteService extends Service {
 
 	constructor({req, res}) {
 		super({req, res});
 	}
 
 	async handle() {
+
 		try {
-			let _Exemple = (new Exemple).getInstance();
-			_Exemple.findOne({ _id: this.req.params.id }, (err, exemple) => {
+			let _Example = (new Example).getInstance();
+			_Example.remove({ _id: this.req.params.id }, (err, Example) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						exemple
+						Example
 					})
 				}
 			})
@@ -26,5 +28,4 @@ export default class readOneService extends Service {
 			return this.end()
 		}
 	}
-
 }

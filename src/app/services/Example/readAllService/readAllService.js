@@ -1,5 +1,5 @@
 import Service from '../../Service';
-import Exemple from '~/app/models/Exemple';
+import Example from '~/app/models/Example';
 
 // let axios = require('axios')
 
@@ -11,13 +11,13 @@ export default class readAllService extends Service {
 
 	async handle() {
 		try {
-			let _Exemple = (new Exemple).getInstance();
-			_Exemple.find((err, exemple) => {
+			let _Example = (new Example).getInstance();
+			_Example.find((err, Example) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						exemple
+						Example
 					})
 				}
 			})
