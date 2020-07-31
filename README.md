@@ -1,6 +1,7 @@
-# Express JS - starter KIT - Innoveos
+# Express JS - starter KIT
 
-MicroService Starter KIT built with Express JS for [@innoveos](https://github.com/innoveos)
+MicroService Starter KIT built with Express JS 
+
 ## Installation
 
 You can simply  :
