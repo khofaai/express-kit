@@ -34,7 +34,7 @@
   "devDependencies": {
     "babel-plugin-root-import": "^6.4.1",
     "component-file-generator": "^0.2.3",
-    "db-migrate": "^0.11.6",
+    "db-migrate": "^0.11.13",
     "eslint-plugin-security": "^1.4.0",
     "nodemon": "^2.0.20"
   }
